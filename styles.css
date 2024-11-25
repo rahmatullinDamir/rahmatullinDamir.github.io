@@ -1,0 +1,46 @@
+* {
+	background-color: pink;
+	font-family: "Verdana";
+}
+h1, h2, h3, h4, h5, h6 {
+	color: white;
+	padding: 10px 0px 10px 0px;
+}
+
+p {
+	color: brown;
+	margin-top: 20px;
+}
+
+img {
+	border: 3px solid brown;
+	float: left;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	color: brown;
+	transition: 0.3s;
+}
+
+li { 
+list-style-type: "\1F44D";
+padding: 10px;
+}
+
+input { 
+	margin-left: 30px;
+
+
+}
+
+.content { 
+	font-size: 24px;
+	font-weight: 800;
+	position: relative;
+	top: 50%;
+}
