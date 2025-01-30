@@ -26,6 +26,12 @@
 				</button>
     		</ul>
     	</nav>
+    	
+    	<div class="burger">
+	        <span></span>
+	        <span></span>
+	        <span></span>
+    	</div>
 	</header>
 
 	<section class="hero" id="hero">
@@ -141,6 +147,17 @@
 	}
 
 	window.addEventListener('scroll', checkVisibility);
+</script>
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.querySelector(".burger");
+    const menu = document.querySelector(".menu");
+
+    burger.addEventListener("click", function () {
+        menu.classList.toggle("menu--active");
+        burger.classList.toggle("burger--active");
+    	});
+	});
 </script>
 
 <footer class="footer">
