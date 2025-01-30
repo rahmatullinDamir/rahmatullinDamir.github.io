@@ -3,30 +3,161 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Моя первая HTML-страница</title>
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Портфолио | Рахматуллин Дамир</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@100..1000&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
 </head>
 <body>
-	 <canvas id="confetti"></canvas>
-	 <h1>Добро пожаловать на мою страницу</h1>
-	 <p>Меня зовут Дамир, я люблю программирование, футбол и компьютерные игры!</p>
-	 <ul>
-   	<li>Программирование</li>
-  	<li>Футбол</li>
-  	<li>Компьютерные игры</li>
-   </ul>
-   <div class="container">
-  	 <img src="image.jpg" alt="Изображение недоступно">
-     <input type="checkbox" class="checkbox-input" id="button">
-     <label for="html" class="checkbox-label" id="button">Я согласна</label>
-  </div>
-  <br>
-  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
-	<script src="script.js"></script>
+
+	<header class="header">
+		<div class="header__logo">
+        	<img src="images/logo.png" alt="Логотип" class="header__logo--image">
+    	</div>
+    	<nav class="header__nav">
+    		<ul class="menu">
+    			<li class="menu__item"><a href="#hero" class="menu__link">ГЛАВНАЯ</a></li>
+    			<li class="menu__item"><a href="#about" class="menu__link">ОБО МНЕ</a></li>
+    			<li class="menu__item"><a href="#projects" class="menu__link">ПРОЕКТЫ</a></li>
+    			<button class="menu__item--button">
+				    <a class ="menu__link"href="mailto:rahmatullin.damir21@gmail.com?subject=Связаться со мной">СВЯЗАТЬСЯ СО МНОЙ</a>
+				</button>
+    		</ul>
+    	</nav>
+	</header>
+
+	<section class="hero" id="hero">
+		<div class="hero__overlay">
+			<h1 class="hero__title">Привет! <span class="hero__title--highlight">Я Дамир</span>. Учусь на втором курсе. <br>Специальность: <span class="hero__title--highlight">Программная инженерия</span>.</h1>
+			 <p class="hero__subtitle"><strong>Готов обсудить идеи для проектов — свяжитесь со мной!</strong></p>
+			<a href="#about" class="hero__btn">УЗНАТЬ БОЛЬШЕ</a>
+		</div>
+	</section>
+
+	<section id="about" class="about">
+	    <div class="about-content">
+	        <div>
+	            <img class ="about-image"src="images/about.png" alt="Фотография" />
+	        </div>
+	    	<div class="about-text">
+			    <h2 class="about-text__title">ОБО МНЕ</h2>
+			    <p class="about-text__paragraph about-text__paragraph--highlight"><strong>Меня зовут Дамир, мне 20 лет, и я увлекаюсь технологиями и программированием.</strong> С детства интересуюсь различной техникой, умею чинить Iphone!</p>
+
+			    <p class="about-text__paragraph"><strong>Образование:</strong> Я окончил Яндекс лицей и IT школу Samsung, где получил прочные основы в программировании и корпоративной разработке.</p>
+
+			    <p class="about-text__paragraph"><strong>Достижения:</strong> Победа на хаккатоне Innopolis Winter 2020, финал олимпиады НТО в треке "Информационная безопасность". Пока я готовился к олимпиаде, я улчшил свои знания в системном администрировании и в области защиты данных.</p>
+			    
+			    <p class="about-text__paragraph"><strong>Карьерные шаги:</strong> Победитель конференции имени Лобачевского в треке "Разработка школьных IT-команд". Это дало мне опыт работы в команде с другими молодыми разработчиками.</p>
+			    
+			    <p class="about-text__paragraph"><strong>Текущие достижения:</strong>Сейчас я учусь на втором курсе по специальности "Программная инженерия" в ИТИС, стремлюсь развиваться в программировании и участвовать в различных проектах.</p>
+			    
+			    <p class="about-text__paragraph"><strong>Профессиональная деятельность:</strong> Активно изучаю новые технологии и языки программирования, участвую в IT-сообществах, создаю полезные и современные продукты.</p>
+			    
+			    <p class="about-text__paragraph"><strong>Что меня вдохновляет:</strong> Я люблю технологии и стремлюсь быть частью инновационных проектов, постоянно совершенствуясь и обучаясь новому.</p>
+			    
+			    <h3 class="about-text__subtitle">Мои преимущества:</h3>
+			    <ul class="about-text__list">
+			        <li class="about-text__list-item">Победы на хаккатонах и олимпиадах</li>
+			        <li class="about-text__list-item">Глубокие знания в программировании и информационной безопасности</li>
+			        <li class="about-text__list-item">Опыт работы в команде и участия в IT-сообществах</li>
+			        <li class="about-text__list-item">Желание постоянно учиться и развиваться в сфере технологий</li>
+			        <li class="about-text__list-item">Опыт участия в научно-практических конференциях</li>
+			    </ul>
+			</div>
+	    </div>
+	</section>
+
+	<section class="projects" id="projects">
+	    <h2 class="projects__title">Мои проекты на GitHub:</h2>
+	    <div class="projects__list">
+	        <div class="project-card">
+	            <div>
+	                <img class="project-card__icon" src="https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white" alt="Swift">
+	            </div>
+	            <div class="project-card__content">
+	                <h3 class="project-card__title">Euro 2024 App</h3>
+	                <p class="project-card__description">Мобильное приложение для болельщиков чемпионата Европы 2024 с расписанием матчей и результатами.</p>
+	                <a href="https://github.com/rahmatullinDamir/euro2024app" class="project-card__btn" target="_blank">Перейти на GitHub</a>
+	            </div>
+	        </div>
+	        <div class="project-card">
+	            <div>
+	                <img class="project-card__icon" src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white" alt="Java">
+	            </div>
+	            <div class="project-card__content">
+	                <h3 class="project-card__title">OnlyFriends</h3>
+	                <p class="project-card__description">Социальная сеть для друзей с возможностью обмена сообщениями и создания событий.</p>
+	                <a href="https://github.com/rahmatullinDamir/onlyFriends" class="project-card__btn" target="_blank">Перейти на GitHub</a>
+	            </div>
+	        </div>
+	        <div class="project-card">
+	            <div>
+	               <img сlass="project-card__icon"src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white" alt="Java">
+	            </div>
+	            <div class="project-card__content">
+	                <h3 class="project-card__title">A* Algorithm in Grid Graph</h3>
+	                <p class="project-card__description">Реализация алгоритма поиска пути A* в сетке графа для оптимизации маршрутов.</p>
+	                <a href="https://github.com/rahmatullinDamir/algorithmAStarInGridGraph" class="project-card__btn" target="_blank">Перейти на GitHub</a>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+
+	<section class="contact" id="contact">
+	    <h2 class="contact__title">Свяжитесь со мной</h2>
+	    <div class="contact__form-container">
+	        <form class="contact__form" action="mailto:rahmatullin.damir21@gmail.com" method="POST" enctype="text/plain">
+			    <div class="contact__form-group">
+			        <label for="name" class="contact__label">Ваше имя</label>
+			        <input type="text" id="name" name="name" class="contact__input" placeholder="Введите ваше имя" required>
+			    </div>
+			    <div class="contact__form-group">
+			        <label for="email" class="contact__label">Ваш email</label>
+			        <input type="email" id="email" name="email" class="contact__input" placeholder="Введите ваш email" required>
+			    </div>
+			    <div class="contact__form-group">
+			        <label for="message" class="contact__label">Сообщение</label>
+			        <textarea id="message" name="message" class="contact__textarea" placeholder="Ваше сообщение" required></textarea>
+			    </div>
+			    <button type="submit" class="contact__submit-btn">Отправить</button>
+			</form>
+	    </div>
+	</section>
+
 </body>
-<footer>
-	<div class="myLink">
-		<a href="https://rutube.ru">мой любимый сайт</a>
-	</div>
+
+<script type="text/javascript">
+	const images = document.querySelectorAll('img');
+
+	function checkVisibility() {
+	    images.forEach(img => {
+	        const rect = img.getBoundingClientRect();
+	        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+	            img.classList.add('visible');
+	        }
+	    });
+	}
+
+	window.addEventListener('scroll', checkVisibility);
+</script>
+
+<footer class="footer">
+    <div class="footer__content">
+        <p class="footer__copyright">© 2025 Все права защищены</p>
+        <div class="footer__socials">
+            <a href="https://github.com/rahmatullinDamir" target="_blank" class="footer__social-link">
+                <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" class="footer__social-icon">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="footer__social-link">
+                <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn" class="footer__social-icon">
+            </a>
+            <a href="https://twitter.com" target="_blank" class="footer__social-link">
+                <img src="https://img.icons8.com/ios-filled/50/000000/twitter.png" alt="Twitter" class="footer__social-icon">
+            </a>
+        </div>
+    </div>
 </footer>
+
 </html>

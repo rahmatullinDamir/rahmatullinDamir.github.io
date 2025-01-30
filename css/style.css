@@ -1,0 +1,38 @@
+@import "blocks/header.css";
+@import "blocks/menu.css";
+@import "blocks/hero.css";
+@import "blocks/about.css";
+@import "blocks/projects.css";
+@import "blocks/contact.css";
+@import "blocks/footer.css";
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Ysabeau Infant", serif;
+    font-weight: 800; 
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+
+img {
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+img.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
