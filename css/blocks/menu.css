@@ -36,17 +36,14 @@
     list-style: none;
 }
 
-.menu__item--button {
-    display: flex;
-    justify-content: center;
-    width: 100%; /* Чтобы кнопка была по центру */
+.menu__link {
+    text-decoration: none;
+    color: black;
 }
 
 .menu__link--button {
     display: inline-block;
     padding: 12px 20px;
-    background-color: forestgreen;
-    color: white;
     font-weight: bold;
     border-radius: 5px;
     transition: 0.3s;
@@ -54,18 +51,7 @@
 }
 
 .menu__link--button:hover {
-    background-color: darkgreen;
-}
-
-
-.menu__link {
-    text-decoration: none;
-    color: black;
-    transition: 0.5s;
-}
-
-.menu__link:hover {
-    color: forestgreen;
+    color: darkgreen;
 }
 
 @media (max-width: 1024px) {
