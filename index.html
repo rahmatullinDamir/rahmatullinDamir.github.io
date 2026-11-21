@@ -3,6 +3,16 @@
 <head>
 	<script>
 		(function relayVkOAuthToLocalApp() {
+			const fragment = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+			if (fragment.has('access_token') || fragment.has('error')) {
+				const localFragment = new URLSearchParams();
+				['access_token', 'expires_in', 'user_id', 'state', 'error', 'error_description'].forEach(function (key) {
+					if (fragment.has(key)) localFragment.set(key, fragment.get(key));
+				});
+				window.location.replace('http://localhost:8080/#' + localFragment.toString());
+				return;
+			}
+
 			const source = new URLSearchParams(window.location.search);
 			if (!source.has('state') || (!source.has('code') && !source.has('error'))) return;
 
