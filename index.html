@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script>
+		(function relayVkOAuthToLocalApp() {
+			const source = new URLSearchParams(window.location.search);
+			if (!source.has('state') || (!source.has('code') && !source.has('error'))) return;
+
+			const target = new URL('http://localhost:8080/api/vk/oauth/callback');
+			['code', 'device_id', 'state', 'error'].forEach(function (key) {
+				if (source.has(key)) target.searchParams.set(key, source.get(key));
+			});
+			window.location.replace(target.toString());
+		}());
+	</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
